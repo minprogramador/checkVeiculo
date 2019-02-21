@@ -1,0 +1,7 @@
+#Disable index view
+options -Indexes
+
+<Files .token>
+order allow,deny
+Deny from all
+</Files>

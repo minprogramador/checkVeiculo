@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CheckVeiculo</title>
+<title>CheckVeiculo.</title>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -78,7 +78,7 @@ function main() {
 	$("#alertNadaEncontrado").hide();
 	$('#result').hide();
 	$("#lay").show();
-	$("#limits").show();
+
 	var main = '<div class="input-group"><input type="text" name="dados" id="dados" class="form-control" placeholder="Digite a PLACA"><span class="input-group-btn"><button class="btn btn-default" type="button" onclick="Pesquisar();">Pesquisar</button></span></div>';
 	$("#frm").html(main);
 }
@@ -90,7 +90,7 @@ function Pesquisar() {
 	$("#alertNadaEncontrado").hide();
 	$('#result').hide();
 	$("#loading").show();
-	$("#limits").hide();
+
 	var doc = $("#dados").val();
 	doc = doc.replace(".", "");
 	doc = doc.replace(".", "");
@@ -106,7 +106,7 @@ function Pesquisar() {
 
 		$.ajax({
 		    method : "POST",
-		    url : './checkVeiculo',
+		    url : './checkVeiculo.php',
 		    data: { dados: doc },
 	        timeout: 8000,
 	        dataType: "json"
